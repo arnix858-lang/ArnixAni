@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArnixAni — Anime Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>ArnixAni</h1>
+      <p>Сайт для поиска аниме через Kodik API.</p>
+    </header>
+
+    <section class="search-panel">
+      <label>
+        Kodik API token
+        <input id="token" type="text" placeholder="Вставьте token" autocomplete="off" />
+      </label>
+      <label>
+        Название аниме
+        <input id="query" type="text" placeholder="Например: Naruto" autocomplete="off" />
+      </label>
+      <button id="searchBtn">Найти</button>
+      <p class="hint">Нужен персональный токен Kodik API.</p>
+      <p id="status"></p>
+    </section>
+
+    <section>
+      <ul id="results" class="results"></ul>
+    </section>
+  </main>
+
+  <template id="animeCardTemplate">
+    <li class="card">
+      <h3 class="title"></h3>
+      <p class="description"></p>
+      <p class="meta"></p>
+      <p class="genres"></p>
+      <a class="watch-link" target="_blank" rel="noopener noreferrer">Открыть источник</a>
+    </li>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
