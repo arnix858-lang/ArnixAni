@@ -1,0 +1,107 @@
+:root {
+  --bg: #0c1020;
+  --panel: #141a2f;
+  --text: #f1f5ff;
+  --muted: #9aa3c3;
+  --accent: #7d6bff;
+  --accent-2: #4fd1ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a2352, var(--bg) 45%);
+  color: var(--text);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(12, 16, 32, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #2a335f;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: .04em;
+  font-size: 1.1rem;
+}
+
+.search-wrap { flex: 1; max-width: 420px; }
+
+.search-wrap input {
+  width: 100%;
+  padding: .65rem .85rem;
+  border-radius: 10px;
+  border: 1px solid #2a335f;
+  background: #111735;
+  color: var(--text);
+}
+
+main { max-width: 1120px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+
+.hero {
+  margin: 1.25rem 0;
+  padding: 1.2rem;
+  border: 1px solid #2a335f;
+  border-radius: 16px;
+  background: linear-gradient(130deg, rgba(125, 107, 255, .20), rgba(79, 209, 255, .12));
+}
+
+.hero h1 { margin: 0 0 .5rem; font-size: 1.8rem; }
+.hero p { margin: 0; color: var(--muted); }
+
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 1.25rem; }
+
+.filter-btn {
+  border: 1px solid #2a335f;
+  border-radius: 999px;
+  background: #111735;
+  color: var(--text);
+  padding: .4rem .8rem;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #2a335f;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+}
+
+.poster { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.meta { padding: .85rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+.title { margin: 0; font-size: 1rem; }
+.desc { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.35; flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; }
+.tag { font-size: .75rem; color: #dbe3ff; background: #232c53; padding: .2rem .5rem; border-radius: 999px; }
+
+.watch-btn {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 10px;
+  padding: .55rem .75rem;
+  font-weight: 700;
+}

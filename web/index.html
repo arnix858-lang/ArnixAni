@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArnixAni — Смотреть аниме онлайн</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">ArnixAni</div>
+    <label class="search-wrap" for="searchInput">
+      <input id="searchInput" type="search" placeholder="Поиск аниме..." />
+    </label>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Смотри любимое аниме в одном месте</h1>
+      <p>Каталог, фильтры по жанрам и быстрый доступ к эпизодам.</p>
+    </section>
+
+    <section class="filters" id="genreFilters"></section>
+
+    <section class="grid" id="animeGrid" aria-live="polite"></section>
+  </main>
+
+  <template id="animeCardTemplate">
+    <article class="card">
+      <img class="poster" alt="Постер аниме" loading="lazy" />
+      <div class="meta">
+        <h2 class="title"></h2>
+        <p class="desc"></p>
+        <div class="tags"></div>
+        <a class="watch-btn" target="_blank" rel="noopener noreferrer">Смотреть</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
